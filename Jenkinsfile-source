@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Generate SBOM') {
       steps {
-        sh 'syft packages dir:. --scope AllLayers'
+        sh 'syft packages dir:/var/lib/jenkins/workspace/Syft_trial --scope AllLayers'
       }
     }
   }
