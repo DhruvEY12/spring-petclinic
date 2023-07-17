@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Scan') {
       steps {
-        sh 'grype dir:/var/lib/jenkins/workspace/Grype_Scan --scope AllLayers'
+        sh 'grype dir:/var/lib/jenkins/workspace/Grype_Scan -o json --scope AllLayers'
       }
     }
   }
